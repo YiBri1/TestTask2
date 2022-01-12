@@ -32,10 +32,6 @@ resource "aws_security_group" "hehe" {
 
   }
 
-  tags = {
-    Name = "allow_tls"
-  }
-
 }
 
 
