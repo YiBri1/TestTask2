@@ -61,5 +61,5 @@ resource "aws_route53_record" "www" {
 
 
 output "name_server"{
-  value=aws_route53_zone.yibri1.name_servers
+  value=aws_route53_zone.yibri.name_servers
 }
