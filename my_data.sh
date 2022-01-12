@@ -2,9 +2,6 @@
 yum -y update
 yum -y install httpd
 
-
-myip=`curl http://172.31.46.65/latest/meta-data/local-ipv4`
-
 cat <<EOF > /var/www/html/index.html
 <html>
 <body bgcolor="EEDDCD">
