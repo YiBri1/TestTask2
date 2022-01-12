@@ -46,24 +46,18 @@ resource "aws_eip" "eip" {
 
 
 
-resource "aws_route53_zone" "yibri1" {
-  name = "yibri1.xyz"
+resource "aws_route53_zone" "yibri" {
+  name = "yibri.xyz"
 }
 
 resource "aws_route53_record" "www" {
-  zone_id = aws_route53_zone.yibri1.zone_id
-  name    = "www.yibri1.xyz"
+  zone_id = aws_route53_zone.yibri.zone_id
+  name    = "www.yibri.xyz"
   type    = "A"
   ttl     = "300"
   records = [aws_eip.eip.public_ip]
 }
 
-
-////////////////////////outputs
-
-output "public_ip" {
-  value = aws_instance.test_webserver.public_ip
-}
 
 
 output "name_server"{
